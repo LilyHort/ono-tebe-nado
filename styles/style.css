@@ -1,23 +1,22 @@
-body {
-    margin: 0 auto;
-}
 /* Шапка */
 
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 90px 50px;
-    text-transform: lowercase;
-    max-width: 1340px;
+    margin: 99px 50px;
+    max-width: 1336px;
+    position: relative;
 }
 
 .header__links-list {
-    font-size: 18px;
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
     list-style-type: circle;
+    text-transform: lowercase;
+    font-size: 18px;
+    max-width: 500px;
 }
 
 .header__links-list-item_no-bullit {
@@ -27,7 +26,7 @@ body {
 .header__link {
     text-decoration: none;
     text-decoration: underline;
-    text-underline-offset: 5px;
+    text-underline-offset: 3px;
 }
 
 .header__link_active {
@@ -35,6 +34,9 @@ body {
 }
 
 .header__logo {
+    position: absolute;
+    top: -7px;
+    left: 603px;
     align-self: center;
 }
 
@@ -58,7 +60,7 @@ body {
     background-image: url(../images/cover.jpg);
     background-size: cover;
     max-width: 1440px;
-    height: 757px;
+    min-height: 757px;
     background-repeat: no-repeat;
     margin-bottom: 180px;
 }
@@ -83,51 +85,48 @@ body {
 }
 
 .aligned-text {
-    letter-spacing: 60px;
-    padding-bottom: 20px;
-}
-.aligned-text span {
     letter-spacing: 30px;
+    padding-bottom: 13px;
+}
+
+.aligned-text__last-letter {
+    letter-spacing: 60px;
 }
 
 .aligned-text_center {
-    align-self: center;
-    letter-spacing: 60px;
-    padding-bottom: 20px;
+    padding-left: 456px;
+    padding-bottom: 5px;
 }
 
-.aligned-text_center span {
-    letter-spacing: 30px;
+.aligned-text__center--last-letter {
+   padding-left: 30px;
 }
-
-
 
 .aligned-text_right {
-    align-self: flex-end;
-    letter-spacing: 60px;
-    padding-bottom: 20px;
+    padding-left: 924px;
+    padding-bottom: 26px;
 }
 
-.aligned-text_right span {
-    letter-spacing: 30px;
+.aligned-text__right-first-letter {
+    letter-spacing: 60px;
 }
 
 .cover__description {
     display: flex;
+    min-width: 968px;
     align-items: baseline;
+    justify-content: end;
     padding: 50px;
 }
 
 .cover__description-text {
     color: #FFF;
-    text-align: center;
     font-size: 22px;
-    font-style: normal;
     font-weight: 400;
     line-height: 28px;
     text-transform: uppercase;
-    margin: 0 auto 50px;
-    word-spacing: 10px;
+    word-spacing: 18px;
+    padding-right: 80px;
 }
 
 .button {
@@ -152,7 +151,7 @@ body {
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
-    margin: 0 0 27px 50px;
+    margin: 0 0 27px 39px;
 }
 
 .lots {
@@ -224,13 +223,21 @@ body {
     background-size: cover;
 }
 
+.lots__look-more-link {
+    text-transform: lowercase;
+    margin-left: 40px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 /*Об аукционе*/
 
 .about {
     display: grid;
     max-width: 1340px;
     grid-template-columns:1fr 2fr;
-    margin: 0 50px 180px;
+    margin: 0 50px 184px;
+    gap: 10px;
 }
 
 .about__logo {
@@ -242,11 +249,13 @@ body {
     z-index: 0;
     align-self: flex-start;
     justify-self: center;   
+    margin-left: -13px;
 }
 
 .about__logo-image {
     position: absolute;
-    top: 55px;
+    top: 63px;
+    
 }
 
 .about__column {
@@ -273,6 +282,7 @@ body {
 .footer {
     display: flex;
     justify-content: space-between;
+    max-width: 1340px;
     margin: 0 50px 90px;
 }
 
@@ -280,6 +290,7 @@ body {
     font-size: 18px;
     list-style-type: none;
     text-align: center;
+    text-transform: lowercase;
 }
 
 .footer__link {
@@ -293,7 +304,10 @@ body {
 }
 
 .footer__social-list {
-    display: flex;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 240px;
     gap: 48px;
     list-style-type: none;
 }
