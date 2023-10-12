@@ -1,12 +1,13 @@
 /* Шапка */
 
 .header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 148px 1fr;
+  gap: 10px;
   justify-content: space-between;
   align-items: center;
-  margin: 99px 50px;
+  margin: 92px 50px;
   max-width: 1336px;
-  position: relative;
 }
 
 .header__links-list {
@@ -33,18 +34,22 @@
 }
 
 .header__logo {
-  position: absolute;
-  top: -7px;
-  left: 603px;
   align-self: center;
 }
 
-.header__address,
+.header__address {
+  justify-self: end;
+}
+
 .address {
   display: flex;
   flex-direction: column;
   font-size: 18px;
   line-height: 24px;
+}
+
+.adress__text {
+  font-style: normal;
 }
 
 .address a {
@@ -92,8 +97,9 @@
 }
 
 .aligned-text_center {
-  padding-left: 456px;
   padding-bottom: 5px;
+  align-self: center;
+  margin-left: -36px;
 }
 
 .aligned-text__center--last-letter {
@@ -101,8 +107,9 @@
 }
 
 .aligned-text_right {
-  padding-left: 924px;
   padding-bottom: 26px;
+  align-self: flex-end;
+  margin-right: -27px;
 }
 
 .aligned-text__right-first-letter {
@@ -111,7 +118,6 @@
 
 .cover__description {
   display: flex;
-  min-width: 968px;
   align-items: baseline;
   justify-content: end;
   padding: 50px;
@@ -197,25 +203,22 @@
   line-height: 24px;
 }
 
-.card_type_film {
-  background-image: url(../images/card-lot-01.jpg);
+.card__general {
   height: 450px;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  height: 450px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  height: 450px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .lots__look-more-link {
@@ -236,7 +239,6 @@
 }
 
 .about__logo {
-  position: relative;
   width: 240px;
   height: 240px;
   background-color: #000;
@@ -248,8 +250,7 @@
 }
 
 .about__logo-image {
-  position: absolute;
-  top: 63px;
+  margin: 61px -2px;
 }
 
 .about__column {
